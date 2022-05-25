@@ -11,7 +11,7 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 35%;
   margin: 150px auto;
   background-color: rgb(227, 226, 226);
   border-radius: 10px;
@@ -87,8 +87,8 @@ main div:nth-child(3) {
 
 main div img {
   display: block;
-  width: 70%;
-  height: 500px;
+  width: 60%;
+  height: 600px;
   object-fit: cover;
   margin: 0 auto;
   border-radius: 50%;
