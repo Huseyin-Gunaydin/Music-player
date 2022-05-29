@@ -6,28 +6,35 @@
 
 body {
   font-family: "Inter", sans-serif;
-  width: 100%;
-  height: 90%;
+  margin-top: 50px;
 }
 .container {
+  height: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 35%;
+  max-width: 448px;
   margin: auto;
   background-color: rgb(227, 226, 226);
   border-radius: 10px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1), 30px 30px 30px rgba(0, 0, 0, 0.1),
     50px 50px 50px rgba(0, 0, 0, 0.1);
-  margin-bottom: 60px;
+}
+@media (max-width: 448px) {
+  .container {
+    height: 100%;
+    border-radius: unset;
+  }
 }
 
 header {
   display: flex;
-  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
   justify-content: space-between;
   margin: 20px 20px;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
 }
 header div {
   display: flex;
@@ -36,32 +43,29 @@ header div {
   flex-wrap: nowrap;
 }
 
-header div:nth-child(2) {
-  flex-shrink: 2;
-}
-
 header button {
-  padding: 2rem;
+  padding: 1rem;
   border: none;
   background-color: rgb(227, 226, 226);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   box-shadow: inset 10px 10px 10px rgba(186, 187, 187, 0.216),
     inset 12px 12px 12px rgba(186, 187, 187, 0.216),
     inset -10px -10px 10px rgba(241, 244, 244, 0.777),
     inset -12px -12px 12px rgba(241, 244, 244, 0.777);
 }
 
-header button i {
-  font-size: 2.5rem;
+header div button i {
+  font-size: 1.5rem;
   font-weight: 900;
+  font-weight: bold;
+  padding: 0.4rem;
 }
 header div:nth-child(3) i {
   color: red;
-  font-size: 2.5rem;
-  font-weight: bold;
 }
 
 h1 {
+  font-size: 18px;
   font-weight: 900;
 }
 
@@ -71,34 +75,31 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 main div {
   margin-top: 25px;
 }
-main div:nth-child(2) {
-  font-family: "Inter", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 500;
-}
-main div:nth-child(3) {
+main h2 {
+  margin-top: 15px;
   font-size: 2rem;
+  font-weight: 400;
+}
+main span {
+  font-size: 1.5rem;
+  margin-top: 10px;
   margin-bottom: 20px;
   font-weight: 900;
   color: gray;
 }
 
-main div img {
-  display: block;
-  width: 50%;
-  height: 35vh;
-  object-fit: cover;
-  margin: 0 auto;
+img {
+  width: 75%;
+  aspect-ratio: 1/1;
   border-radius: 50%;
-  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.3),
-    -10px 10px 10px rgba(0, 0, 0, 0.3), -10px 10px 10px rgba(0, 0, 0, 0.3),
-    10px -10px 10px rgba(255, 255, 255, 0.9),
-    10px -10px 10px rgba(255, 255, 255, 0.9),
-    10px -10px 10px rgba(255, 255, 255, 0.9);
+
+  box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.3), -6px 6px 6px rgba(0, 0, 0, 0.3),
+    6px -6px 6px rgba(255, 255, 255, 0.9), 6px -6px 6px rgba(255, 255, 255, 0.9);
 }
 
 .loading {
@@ -106,21 +107,21 @@ main div img {
   border: 1px solid rgba(63, 63, 63, 0.2);
   justify-content: start;
   width: 80%;
-  height: 15px;
+  height: 10px;
   margin: auto;
   border-radius: 20px;
 }
 .loading div:nth-child(1) {
-  padding-left: 70%;
+  padding-left: 100%;
 
-  background: rgb(0, 0, 0);
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 189, 255, 1) 100%,
-    rgba(255, 0, 0, 1) 100%,
-    rgba(137, 0, 0, 1) 100%,
-    rgba(219, 0, 0, 1) 100%
+  background: rgb(136, 210, 218);
+  background: linear-gradient(
+    90deg,
+    rgba(136, 210, 218, 1) 8%,
+    rgba(114, 194, 230, 1) 20%,
+    rgba(92, 164, 210, 1) 50%,
+    rgba(124, 228, 228, 1) 71%,
+    rgba(255, 255, 255, 1) 72%
   );
 }
 
@@ -138,51 +139,45 @@ main div img {
 }
 
 footer button {
-  padding: 1rem;
+  padding: 0.5rem;
   border: none;
   background-color: rgb(227, 226, 226);
   border-radius: 1.2rem;
-
-  box-shadow: inset 10px 10px 10px rgba(186, 187, 187, 0.216),
-    inset 12px 12px 12px rgba(186, 187, 187, 0.216),
-    inset -10px -10px 10px rgba(241, 244, 244, 0.777),
-    inset -12px -12px 12px rgba(241, 244, 244, 0.777);
-  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.3), -5px 5px 5px rgba(0, 0, 0, 0.3),
-    -5px 5px 5px rgba(0, 0, 0, 0.3), 5px -5px 5px rgba(255, 255, 255, 0.9),
-    5px -5px 5px rgba(255, 255, 255, 0.9), px -5px 5px rgba(255, 255, 255, 0.9);
+  box-shadow: -5px 5px 5px #bbbaba, 2px -2px 2px #f2f1f1;
+}
+footer i {
+  font-size: 2.3rem;
+  font-weight: 900;
+  font-weight: bold;
+  padding: 0.4rem;
 }
 
-footer button i {
-  font-size: 3rem;
-  color: rgba(34, 24, 24, 0.8);
+footer .media-Playback #play i {
+  font-size: 2.5rem;
+  padding: 5px;
+  color: rgb(87, 218, 218);
 }
 
-footer .media-Playback .play i {
-  color: rgb(123, 243, 243);
+footer #play {
+  box-shadow: inset -10px 10px 17px #cacaca, inset 10px -10px 17px #f6f6f6;
 }
 
 .linie {
   display: flex;
   margin: 50px auto;
-  width: 50%;
-  height: 15px;
+  width: 55%;
+  height: 7px;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
 
-  box-shadow: inset -5px 5px 5px rgba(0, 0, 0, 0.3),
-    inset -6px 6px 6px rgba(0, 0, 0, 0.3), inset -7px 7px 7px rgba(0, 0, 0, 0.3),
-    inset 5px -5px 5px rgba(255, 255, 255, 0.834),
-    inset 6px -6px 6px rgba(255, 255, 255, 0.8),
-    inset 7px -7px 4px rgba(255, 255, 255, 0.8);
+  box-shadow: inset -2px 2px 2px rgba(0, 0, 0, 0.3),
+    inset -2px 2px 2px rgba(0, 0, 0, 0.3), inset -2px 2px 2px rgba(0, 0, 0, 0.3),
+    inset 2px -2px 2px rgba(255, 255, 255, 0.1),
+    inset 2px -2px 2px rgba(255, 255, 255, 0.1),
+    inset 2px -2px 2px rgba(255, 255, 255, 0.1);
 }
-@media (max-width: 1400px) {
-  .container {
-    width: 500px;
-  }
-}
-
-@media (max-width: 1400px) {
+@media (max-width: 900px) {
   .container {
     width: 500px;
   }
