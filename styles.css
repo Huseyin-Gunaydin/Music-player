@@ -143,7 +143,7 @@ footer button {
   border: none;
   background-color: rgb(227, 226, 226);
   border-radius: 1.2rem;
-  box-shadow: -5px 5px 5px #bbbaba, 2px -2px 2px #f2f1f1;
+  box-shadow: -5px 5px 5px #bbbaba, 5px -5px 5px #eeebeb;
 }
 footer i {
   font-size: 2.3rem;
